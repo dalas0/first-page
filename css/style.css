@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&family=Open+Sans:wght@400;600&display=swap');
+
+@keyframes move {
+    0% {
+        transform: translateY(20px) rotate(8deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(8deg);
+    }
+    50% {
+        transform: translateY(10px) rotate(8deg);
+    }
+    75% {
+        transform: translateY(-20px) rotate(8deg);
+    }
+    100% {
+        transform: translateY(20px) rotate(8deg);
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arimo', sans-serif;
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header, .bonjour, .img-room, .creative, .useful, .text-box, .footer {
+    margin-top: 150px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+
+.logo {
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.logo:hover, .media ul li a:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+nav ul {
+    margin-right: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 13px;
+    list-style: none;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    margin-left: 20px ;
+    padding: 7.5px 36px; 
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: .5s;
+}
+
+nav ul li:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.4);
+}
+
+h1 {
+    font-size: 150px;
+    text-transform: uppercase;
+    mix-blend-mode: exclusion;
+    z-index: 1;
+    line-height: 150px;
+    max-width: 1100px;
+}
+
+p {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.img-face img {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    width: 400px;
+    height: 500px;
+    display: block;
+    border-radius: 30px;
+    object-fit: cover;
+    animation-duration: 10s;
+    z-index: 1;
+    animation-name: move;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    mix-blend-mode: exclusion;
+}
+
+.bonjour, .creative, .right-side {
+    position: relative;
+    width: 50%;
+}
+
+.bonjour, .right-side {
+    transform: translateX(100%);
+}
+
+h2 {
+    font-size: 35px;
+}
+
+
+.img-room img {
+    width: 100%;
+    height: 120vh;
+    object-fit: cover;
+}
+
+h3 {
+    font-size: 13px;
+}
+
+.special-word {
+    font-size: 200px;
+    width: 50%;
+    transition: 1s;
+    text-shadow: -1px -1px 0px white,
+    1px -1px 0px white,
+    -1px 1px 0px white,
+    1px 1px 0px white;
+}
+
+.special-word:hover {
+    color: black;
+}
+
+.text-box {
+    margin-top: 100px;
+    text-align: center;
+}
+
+h5 {
+    font-size: 15px
+}
+
+h6 {
+    font-size: 100px;
+}
+
+.footer {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    bottom: 0;
+}
+
+.media {
+    display: flex;
+    
+}
+
+.media ul li {
+    display: inline-block;
+    padding-left: 10px;
+    position: relative;
+    top: 20px
+}
+
+.media ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+@media(max-width: 1000px) {
+    nav ul li {
+        border: none;
+        font-size: 2vw;
+        margin-left: 5px;
+    }
+
+    h1 {
+        font-size: 12vw;
+        line-height: 10vw;
+    }
+    .img-face img {
+        animation: none;
+        position: relative;
+        top: 30px;
+        right: 0;
+        width: 100%;
+        border-radius: 0;
+        height: auto;
+    }
+
+
+    .header {
+        margin-top: 50px;
+    }
+
+    .special-word {
+        font-size: 10vw;
+    }
+
+    h6 {
+        font-size: 8vw;
+    }
+
+    .footer {
+        display: block;
+    }
+
+    .media {
+        font-size: 3vw;
+    }
+
+}
